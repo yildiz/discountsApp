@@ -1,25 +1,25 @@
 import React from 'react';
-import { View, Image } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 
 import Text from '../Text';
 
 const Offer = (props) => {
 	return (
-		<View style={styles.container}>
+		<TouchableOpacity style={styles.container}>
 			<View style={{ flex: 0.5 }} />
 			<View style={{ flex: 2 }}>
 				<Image style={styles.marketPicture} source={{ uri: props.image }} />
 			</View>
 			<View style={{ flex: 7 }}>
 				<Text size={14}>{props.title}</Text>
-				<Text size={12} font="Regular" color={"#9399A3"}>{props.desc}</Text>
+				<Text size={12}  color={"#9399A3"}>{props.desc}</Text>
 				<View style={styles.ratings}>
-					<View style={[styles.star.bg, styles.rateItem]}><Text color={"#1D262C"} font="Medium">♥ {props.star}</Text></View>
-					<View style={[styles.category.bg, styles.rateItem]}><Text color={"#0074E4"} font="Medium">{props.category}</Text></View>
-					<View style={[styles.days.bg, styles.rateItem]}><Text color={"#CF1E43"} font="Medium">{props.days}</Text></View>
+					<View style={[styles.star.bg, styles.rateItem]}><Text color={"#1D262C"} medium>♥ {props.star}</Text></View>
+					<View style={[styles.category.bg, styles.rateItem]}><Text color={"#0074E4"} medium>{props.category}</Text></View>
+					<View style={[styles.days.bg, styles.rateItem]}><Text color={"#CF1E43"} medium>{props.days}</Text></View>
 				</View>
 			</View>
-		</View>
+		</TouchableOpacity>
 	)
 };
 
@@ -35,7 +35,7 @@ const styles = {
 	},
 	marketPicture: {
 		width: 50, height: 50,
-		borderRadius: 50,
+		borderRadius: 25,
 	},
 	ratings: {
 		flexDirection: 'row',

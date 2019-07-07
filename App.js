@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
-import { StyleSheet, View, Text, Image, TouchableOpacity, Dimensions } from 'react-native';
+import { StyleSheet, SafeAreaView, Text, Image, TouchableOpacity, Dimensions } from 'react-native';
 
 import Splash from './Splash';
 import Login from './Login';
+import Login2 from './Login2';
 import Welcome from './Welcome';
 import Feed from './Feed';
+import Offer from './Offer';
 
 export default class App extends Component{
 
@@ -32,12 +34,14 @@ export default class App extends Component{
 
 	render() {
 		return (
-			<View style={{ flex: 1 }}>
+			<SafeAreaView style={{ flex: 1 }}>
 				{
 					(this.state.screen === "Splash") ? <Splash /> : (this.state.screen === "Welcome") ? <Welcome onPress={this.goToLogin} /> : (this.state.screen === "Login") ? <Login onPress={this.goToFeed} /> : <Feed />
-					// <Feed />
+					//<Feed />
+					//<Offer />
+					//<Login2 />
 				}
-			</View>
+			</SafeAreaView>
 		);
 	}
 }

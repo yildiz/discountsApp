@@ -2,7 +2,7 @@ import React from 'react';
 import { Text } from 'react-native';
 
 const Typography = (props) => {
-	const { size, h1, align, color, font, ph, pv } = props;
+	const { size, h1, align, color, font, ph, pv, regular, medium, semibold, bold } = props;
 
 	const textStyle = [
 		styles.text,
@@ -12,7 +12,10 @@ const Typography = (props) => {
 		color && { color: color },
 		ph && { paddingHorizontal: ph },
 		pv && { paddingVertical: pv },
-		font && { fontFamily: `Poppins-${font}` }
+		regular && { fontFamily: `Poppins-Regular` },
+		medium && { fontFamily: `Poppins-Medium` },
+		semibold && { fontFamily: `Poppins-SemiBold` },
+		bold && { fontFamily: `Poppins-Bold` },
 	];
 
 	return (
@@ -26,7 +29,8 @@ const styles = {
 	text: {
 		color: "#1D262C",
 		fontSize: 12,
-		fontFamily: "Poppins-SemiBold"
+		//fontFamily: "Poppins-SemiBold"
+		fontFamily: "Poppins-Regular"
 	},
 	h1: {
 		fontSize: 20

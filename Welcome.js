@@ -13,10 +13,10 @@ export default class App extends Component{
 			<View style={styles.area1}>
 				<View>
 					<Text align={"center"} h1>Cheers to Discounts!</Text>
-					<Text align={"center"} color={"#71828A"} font="Regular">Curabitur lobortis id lorem bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.</Text>
+					<Text align={"center"} color={"#71828A"} >Curabitur lobortis id lorem bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.</Text>
 				</View>
 				<TouchableOpacity style={styles.button} onPress={this.props.onPress}>
-					<Text font="SemiBold" size={13} color={"#fff"} size={13}>Get started</Text>
+					<Text semibold size={13} color={"#fff"} size={13}>Get started</Text>
 				</TouchableOpacity>
 			</View>
 		</View>

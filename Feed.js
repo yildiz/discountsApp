@@ -11,15 +11,15 @@ export default class App extends Component{
 	return (
 		<ScrollView style={styles.container}>
 			<View style={styles.header.container}>
-				<Text h1 font="SemiBold">Offers Galore</Text>
+				<Text h1 semibold>Offers Galore</Text>
 				<Image style={styles.profilePic} source={{ uri: "https://randomuser.me/api/portraits/women/95.jpg" }} />
 			</View>
 			<Image style={styles.promotionImage} source={require("./src/images/nike.png")} />
 			<View style={{ paddingBottom: 30 }}>
 				<TabArea />
 				<View style={styles.offersHeader}>
-					<Text font="Regular">Recommended for you</Text>
-					<Text font="Regular">Filters ♥</Text>
+					<Text>Recommended for you</Text>
+					<Text>Filters ♥</Text>
 				</View>
 
 				<Offer title={"10 - 40% OFF"} desc={"Flat Discounts on Every purchase!"} star={"4.5"} category={"Food"} days={"15 Days"} image={"https://randomuser.me/api/portraits/women/33.jpg"} />

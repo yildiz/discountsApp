@@ -4,9 +4,10 @@ import { TouchableOpacity } from 'react-native';
 import Text from '../Text';
 
 const Button = (props) => {
+	//TODO: style ekle style={props.textStyle}
 	return (
 		<TouchableOpacity style={[styles.button, props.row ? { width: "45%", marginHorizontal: 15 } : null, props.buttonStyle ]} {...props}>
-			<Text style={[styles.buttonText, props.textStyle]}>
+			<Text size={13} col1or="#fff" {...props.textStyle}>
 				{props.title}
 			</Text>
 		</TouchableOpacity>
@@ -25,11 +26,6 @@ const styles = {
 		width: "100%",
 		marginVertical: 10,
 	},
-	buttonText: {
-		fontFamily: "Poppins-SemiBold",
-		fontSize: 13,
-		color: "#fff",
-	}
 }
 
 export default Button;

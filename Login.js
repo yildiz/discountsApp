@@ -13,15 +13,15 @@ export default class App extends Component{
 			<Image source={require("./src/images/logo.png")} resizeMode="stretch" style={styles.image} />
 			<View style={styles.area1}>
 				<View>
-					<Text h1 font="SemiBold" align="center">Welcome Aboard!</Text>
-					<Text font="Regular" align="center" color="#71828A">Signup to get started with the app. Login if you already have an account.</Text>
+					<Text h1 semibold align="center">Welcome Aboard!</Text>
+					<Text  align="center" color="#71828A">Signup to get started with the app. Login if you already have an account.</Text>
 				</View>
 				<View style={styles.actions}>
 					<View style={styles.socialActions}>
 						<Button row title={"FB"} buttonStyle={{ backgroundColor: "transparent", borderColor: "#e7ecee", borderWidth: 2 }} textStyle={{ color: "#000" }} />
 						<Button row title={"GGL"} buttonStyle={{ backgroundColor: "transparent", borderColor: "#e7ecee", borderWidth: 2 }} textStyle={{ color: "#000" }} />
 					</View>
-					<Button onPress={this.props.onPress} title={"Signup with E-mail"} />
+					<Button onPress={this.props.onPress} title={"Signup with E-mail"} textStyle={{ color: "#fff" }} />
 					<Button title={"Login to My Account"} buttonStyle={{ backgroundColor: "transparent", borderWidth: 0 }} textStyle={{ color: "#000" }} />
 				</View>
 			</View>
