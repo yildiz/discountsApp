@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import { StyleSheet, View, Image, TextInput, Dimensions } from 'react-native';
 
-import Button from './src/components/Button';
-import Text from './src/components/Text';
+import Button from '../components/Button';
+import Text from '../components/Text';
 
 const { width } = Dimensions.get('window');
 
@@ -13,7 +13,7 @@ export default class App extends Component{
 	render() {
 		return (
 			<View style={styles.container}>
-				<Image source={require("./src/images/logo.png")} resizeMode="stretch" style={styles.image} />
+				<Image source={require("../images/logo.png")} resizeMode="stretch" style={styles.image} />
 				<View style={styles.area1}>
 					<View>
 						<Text h1 semibold align="center">Welcome Aboard!</Text>

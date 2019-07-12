@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import { StyleSheet, View, Image, TouchableOpacity, Dimensions } from 'react-native';
+import Icon from 'react-native-vector-icons/Ionicons';
 
-import Button from './src/components/Button';
-import Text from './src/components/Text';
+import Button from '../components/Button';
+import Text from '../components/Text';
 
 const { width } = Dimensions.get('window');
 
@@ -10,7 +11,7 @@ export default class App extends Component{
   render() {
 	return (
 		<View style={styles.container}>
-			<Image source={require("./src/images/logo.png")} resizeMode="stretch" style={styles.image} />
+			<Image source={require("../images/logo.png")} resizeMode="stretch" style={styles.image} />
 			<View style={styles.area1}>
 				<View>
 					<Text h1 semibold align="center">Welcome Aboard!</Text>
@@ -18,11 +19,15 @@ export default class App extends Component{
 				</View>
 				<View style={styles.actions}>
 					<View style={styles.socialActions}>
-						<Button row title={"FB"} buttonStyle={{ backgroundColor: "transparent", borderColor: "#e7ecee", borderWidth: 2 }} textStyle={{ color: "#000" }} />
-						<Button row title={"GGL"} buttonStyle={{ backgroundColor: "transparent", borderColor: "#e7ecee", borderWidth: 2 }} textStyle={{ color: "#000" }} />
+						<Button onPress={() => this.props.navigation.navigate("Feed")} row buttonStyle={{ backgroundColor: "transparent", borderColor: "#e7ecee", borderWidth: 2 }}>
+							<Icon name="logo-facebook" size={30} color="#4F8EF7" />
+						</Button>
+						<Button onPress={() => this.props.navigation.navigate("Feed")} row buttonStyle={{ backgroundColor: "transparent", borderColor: "#e7ecee", borderWidth: 2 }}>
+							<Icon name="logo-twitter" size={30} color="#4F8EF7" />
+						</Button>
 					</View>
-					<Button onPress={this.props.onPress} title={"Signup with E-mail"} textStyle={{ color: "#fff" }} />
-					<Button title={"Login to My Account"} buttonStyle={{ backgroundColor: "transparent", borderWidth: 0 }} textStyle={{ color: "#000" }} />
+					<Button onPress={() => this.props.navigation.navigate("Feed")} title={"Signup with E-mail"} textStyle={{ color: "#fff", semibold: true }}/>
+					<Button onPress={() => this.props.navigation.navigate("Login2")} title={"Login to My Account"} buttonStyle={{ backgroundColor: "transparent", borderWidth: 0 }} textStyle={{ color: "#000", semibold: true }} />
 				</View>
 			</View>
 		</View>

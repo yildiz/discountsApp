@@ -3,19 +3,19 @@ import { StyleSheet, View, Image, TouchableOpacity, Dimensions } from 'react-nat
 
 const { width } = Dimensions.get('window');
 
-import Text from './src/components/Text';
+import Text from '../components/Text';
 
 export default class App extends Component{
   render() {
 	return (
 		<View style={styles.container}>
-			<Image source={require("./src/images/welcome.png")} resizeMode="stretch" style={styles.image} />
+			<Image source={require("../images/welcome.png")} resizeMode="stretch" style={styles.image} />
 			<View style={styles.area1}>
 				<View>
 					<Text align={"center"} h1>Cheers to Discounts!</Text>
 					<Text align={"center"} color={"#71828A"} >Curabitur lobortis id lorem bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.</Text>
 				</View>
-				<TouchableOpacity style={styles.button} onPress={this.props.onPress}>
+				<TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate("Login")}>
 					<Text semibold size={13} color={"#fff"} size={13}>Get started</Text>
 				</TouchableOpacity>
 			</View>

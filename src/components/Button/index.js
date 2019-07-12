@@ -7,9 +7,10 @@ const Button = (props) => {
 	//TODO: style ekle style={props.textStyle}
 	return (
 		<TouchableOpacity style={[styles.button, props.row ? { width: "45%", marginHorizontal: 15 } : null, props.buttonStyle ]} {...props}>
-			<Text size={13} col1or="#fff" {...props.textStyle}>
-				{props.title}
-			</Text>
+			{
+				props.title ? <Text size={13} col1or="#fff" {...props.textStyle}>{props.title}</Text> : 
+				props.children
+			}
 		</TouchableOpacity>
 	)
 };

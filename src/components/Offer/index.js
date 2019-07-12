@@ -5,7 +5,7 @@ import Text from '../Text';
 
 const Offer = (props) => {
 	return (
-		<TouchableOpacity style={styles.container}>
+		<TouchableOpacity onPress={props.onPress} style={styles.container}>
 			<View style={{ flex: 0.5 }} />
 			<View style={{ flex: 2 }}>
 				<Image style={styles.marketPicture} source={{ uri: props.image }} />
