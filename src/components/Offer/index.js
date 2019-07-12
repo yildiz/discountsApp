@@ -11,8 +11,8 @@ const Offer = (props) => {
 				<Image style={styles.marketPicture} source={{ uri: props.image }} />
 			</View>
 			<View style={{ flex: 7 }}>
-				<Text size={14}>{props.title}</Text>
-				<Text size={12}  color={"#9399A3"}>{props.desc}</Text>
+				<Text size={14} semibold>{props.title}</Text>
+				<Text size={12} color={"#9399A3"}>{props.desc}</Text>
 				<View style={styles.ratings}>
 					<View style={[styles.star.bg, styles.rateItem]}><Text color={"#1D262C"} medium>♥ {props.star}</Text></View>
 					<View style={[styles.category.bg, styles.rateItem]}><Text color={"#0074E4"} medium>{props.category}</Text></View>

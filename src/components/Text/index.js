@@ -16,10 +16,11 @@ const Typography = (props) => {
 		medium && { fontFamily: `Poppins-Medium` },
 		semibold && { fontFamily: `Poppins-SemiBold` },
 		bold && { fontFamily: `Poppins-Bold` },
+		props.styles || {}
 	];
 
 	return (
-		<Text style={textStyle} {...props}>
+		<Text {...props} style={textStyle}>
 			{props.children}
 		</Text>
 	)

@@ -12,7 +12,7 @@ export default class App extends Component{
 			<Image source={require("../images/welcome.png")} resizeMode="stretch" style={styles.image} />
 			<View style={styles.area1}>
 				<View>
-					<Text align={"center"} h1>Cheers to Discounts!</Text>
+					<Text align={"center"} h1 semibold>Cheers to Discounts!</Text>
 					<Text align={"center"} color={"#71828A"} >Curabitur lobortis id lorem bibendum. Ut id consectetur magna. Quisque volutpat augue enim, pulvinar lobortis nibh lacinia at.</Text>
 				</View>
 				<TouchableOpacity style={styles.button} onPress={() => this.props.navigation.navigate("Login")}>

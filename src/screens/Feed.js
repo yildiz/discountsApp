@@ -62,7 +62,8 @@ const styles = {
 	offersHeader: {
 		marginVertical: 15,
 		flexDirection: 'row',
-		justifyContent: "space-between"
+		justifyContent: "space-between",
+		paddingHorizontal: 10
 	}
 }
 

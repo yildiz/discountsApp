@@ -77,8 +77,7 @@ export default class OfferScreen extends Component {
 const styles = {
 	container: {
 		flex: 1,
-		paddingHorizontal: 20,
-		paddingTop: 30,
+		paddingHorizontal: 20
 	},
 	header: {
 		container: {
